@@ -1,7 +1,10 @@
 
 class VoiceAssistant:
     def __init__(self):
-        pass
+        self.VA_VERSION_MAJOR = va_config.VA_VERSION_MAJOR
+        self.VA_VERSION_MINOR = va_config.VA_VERSION_MINOR
+
+        self.VA_VERSION = f"{self.VA_VERSION_MAJOR}.{self.VA_VERSION_MINOR}"
 
 if __name__ == "__main__":
 
