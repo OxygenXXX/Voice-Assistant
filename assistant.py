@@ -13,9 +13,6 @@ class VoiceAssistant:
     def initialize_commands(self):
         import commands.greeting
 
-        commands.greeting.execute_command()
-
-
 if __name__ == "__main__":
     import config as va_config
 
@@ -26,3 +23,5 @@ if __name__ == "__main__":
 
     voice_assistant.initialize_subsystems()
     voice_assistant.initialize_commands()
+
+    voice_assistant.stt_subsystem.select_microphone()
