@@ -7,5 +7,4 @@ class TTS:
         pass
 
 if __name__ != "__main__":
-
     import_message()

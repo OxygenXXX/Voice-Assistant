@@ -6,9 +6,23 @@ class VoiceAssistant:
 
         self.VA_VERSION = f"{self.VA_VERSION_MAJOR}.{self.VA_VERSION_MINOR}"
 
-if __name__ == "__main__":
+    def initialize_subsystems(self):
+        self.tts_subsystem = tts_system.TTS()
+        self.stt_subsystem = stt_system.STT()
 
+    def initialize_commands(self):
+        import commands.greeting
+
+        commands.greeting.execute_command()
+
+
+if __name__ == "__main__":
     import config as va_config
 
     import system.tts_system as tts_system
     import system.stt_system as stt_system
+
+    voice_assistant = VoiceAssistant()
+
+    voice_assistant.initialize_subsystems()
+    voice_assistant.initialize_commands()
