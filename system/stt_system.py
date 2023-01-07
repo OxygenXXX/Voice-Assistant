@@ -21,8 +21,14 @@ class STT:
 
             device_index = str(int(input("Select microphone you want to use: ")))
 
-            with open(index_file_path, "w") as index_file:
-                index_file.write(device_index)
+            if int(device_index) not in range(0, len(devices) - 1, 1):
+                print("Invalid device index!")
+
+                self.select_microphone()
+
+            else:
+                with open(index_file_path, "w") as index_file:
+                    index_file.write(device_index)
 
         else:
             with open(index_file_path, "r") as index_file:
