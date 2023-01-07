@@ -1,3 +1,4 @@
 *.pyc
 
-microphone_index.txt
+/microphone_index.txt
+/voice_index.txt

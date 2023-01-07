@@ -17,7 +17,7 @@ class STT:
             devices = speech_recognition.Microphone.list_microphone_names()
 
             for index, microphone in enumerate(devices):
-                print(f"Microphone {microphone} found for (device_index = {index})")
+                print(f"{index}: Microphone {microphone}")
 
             device_index = str(int(input("Select microphone you want to use: ")))
 

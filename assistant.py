@@ -24,4 +24,4 @@ if __name__ == "__main__":
     voice_assistant.initialize_subsystems()
     voice_assistant.initialize_commands()
 
-    voice_assistant.stt_subsystem.select_microphone()
+    voice_assistant.tts_subsystem.select_voice()
